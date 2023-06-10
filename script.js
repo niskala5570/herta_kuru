@@ -9,7 +9,7 @@
             texts: {
                 "page-title": "Selamat datang ke Herta kuru~",
                 "doc-title": "Kuru Kuru~",
-                "page-descriptions": "Laman web khas untuk Herta, seorang watak pintar yang <del>mengerigitkan</del> dari Honkai: Star Rail.",
+                "page-descriptions": "Laman web khas untuk Herta, watak pintar tercomel yang <del>mengerigitkan</del> dari Honkai: Star Rail.",
                 "counter-descriptions": ["Kuru-nya telah dihentam sebanyak", "Herta telah di-kuru-kan sebanyak"],
                 "counter-unit": "kali",
                 "counter-button": ["Kasi hentam sama kuru~!", "Kuru kuru~!", "Kururin~!", "Kururing~!"],
@@ -31,7 +31,7 @@
             texts: {
                 "page-title": "سلامت داتڠ کهێرتا کورو~",
                 "doc-title": "کورو کورو~",
-                "page-descriptions": "لامن ويب خاس اونتوق هێرتا⹁ سأورڠ واتق ڤينتر يڠ <del style='font-family: JAWI Al Arabiya;'>مڠݢريݢيتکن</del> دري هۆنکاي: ستر رێل.",
+                "page-descriptions": "لامن ويب خاس اونتوق هێرتا⹁ واتق ڤينتر ترچوميل يڠ <del style='font-family: JAWI Al Arabiya;'>مڠݢريݢيتکن</del> دري هۆنکاي: ستر رێل.",
                 "counter-descriptions": ["کورو-ڽ تله دهنتم سباڽق", "هێرتا تله د-کورو-کن سباڽق"],
                 "counter-unit": "کالي",
                 "counter-button": ["کاسي هنتم سام کورو~!", "کورو کورو~!", "کورورين~!","کوروريڠ~!"],
