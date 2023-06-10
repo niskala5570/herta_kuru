@@ -1,3 +1,12 @@
+/* Font */
+@font-face {
+    font-family: 'JAWI Al Arabiya';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/font/JAWI_AlArabiyaTV.woff2) format('woff2');
+    unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+10E60-10E7F,U+1EC70-1ECBF,U+1ED00-1ED4F,U+1EE00-1EEFF,U+2E41;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +15,11 @@
     touch-action: manipulation;
     /* strange margin-right occurs when vw<500px */
     /* overflow-x: hidden; */
+    font-family: Calibri, Roboto, sans-serif;
 }
 
 body {
     background-color: #9d88d3;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", 'Roboto', sans-serif;
     font-size: 1.5em;
     color: white;
     overflow-x: hidden;
@@ -55,12 +64,27 @@ h1 {
     text-align: center;
     font-size: 3em;
     font-weight: bold;
+    color: white;
+    font-family: JAWI Al Arabiya, Roboto, sans-serif;
 }
 
 h2 {
     text-align: center;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 3em;
+    color: white;
+    font-family: JAWI Al Arabiya, Roboto, sans-serif;
+}
+
+h3 {
+    font-size: 3em;
+    color: white;
+    font-family: JAWI Al Arabiya, Roboto, sans-serif;
+}
+
+p {
+    font-weight: bold;
+    font-size: 3em;
 }
 
 #title-container {
@@ -69,7 +93,10 @@ h2 {
 }
 
 #page-title {
-    text-align: left;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-family: JAWI Al Arabiya, Roboto, sans-serif;
 }
 
 #title-img {
@@ -123,8 +150,8 @@ h2 {
     color: white;
     padding: 16px 32px;
     text-decoration: none;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-family: 'JAWI Al Arabiya','Roboto', sans-serif;
     font-weight: bold;
     margin-top: 16px;
 
@@ -311,7 +338,8 @@ h2 {
 
 #access-via-mirror,
 #access-via-pages {
-    font-size: small;
+    font-size: large;
+    font-family: Calibri ,Roboto;
 }
 
 #credits-part {

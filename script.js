@@ -3,7 +3,51 @@
     let firstSquish = true;
 
     const LANGUAGES = {
-        "_": { defaultLanguage: "en", defaultVOLanguage: "ja" },
+        "_": { defaultLanguage: "ms-Arab", defaultVOLanguage: "ja" },
+        "ms": {
+            audioList: null,
+            texts: {
+                "page-title": "Selamat datang ke Herta kuru~",
+                "doc-title": "Kuru Kuru~",
+                "page-descriptions": "Laman web khas untuk Herta, seorang watak pintar yang <del>mengerigitkan</del> dari Honkai: Star Rail.",
+                "counter-descriptions": ["Kuru-nya telah dihentam sebanyak", "Herta telah di-kuru-kan sebanyak"],
+                "counter-unit": "kali",
+                "counter-button": ["Kasi hentam sama kuru~!", "Kuru kuru~!", "Kururin~!", "Kururing~!"],
+                "access-via-pages": "Kamu sedang membuka laman salinan untuk bahasa Melayu, sila lawati yang aslinya di github atas.",
+                "access-via-mirror": "Selamat! Kamu sedang menggunakan situs mirror, yang mana seharusnya mempercepat akses untuk wilayah sekitar Tiongkok (daratan) dan wilayah lainnya . Silakan klik <a href='https://duiqt.github.io/herta_kuru/'> di sini untuk mengunjungi situs sumbernya pada Laman Github</a>.",
+                "show-credits-text": "Paparkan Kredit",
+                "repository-desc": "Simpanan GitHub",
+                "options-txt-vo-lang": "Bahasa Suara",
+                "options-txt-lang": "Bahasa Laman",
+                "dialogs-close": "Tutup",
+                "dialogs-credits-title": "Kredit",
+                "creditsHtmlContent": "Bukan dalam turutan",
+                "Options": "Tetapan"
+            },
+            cardImage: "img/card_ms.jpg"
+        },
+        "ms-Arab": {
+            audioList: null,
+            texts: {
+                "page-title": "سلامت داتڠ کهێرتا کورو~",
+                "doc-title": "کورو کورو~",
+                "page-descriptions": "لامن ويب خاس اونتوق هێرتا⹁ سأورڠ واتق ڤينتر يڠ <del style='font-family: JAWI Al Arabiya;'>مڠݢريݢيتکن</del> دري هۆنکاي: ستر رێل.",
+                "counter-descriptions": ["کورو-ڽ تله دهنتم سباڽق", "هێرتا تله د-کورو-کن سباڽق"],
+                "counter-unit": "کالي",
+                "counter-button": ["کاسي هنتم سام کورو~!", "کورو کورو~!", "کورورين~!","کوروريڠ~!"],
+                "access-via-pages": "کامو سدڠ ممبوک لامن سالينن اونتوق بهاس ملايو⹁ سيلا لاواتي يڠ اصليڽ دݢيتهب اتس.",
+                "access-via-mirror": "Selamat! Kamu sedang menggunakan situs mirror, yang mana seharusnya mempercepat akses untuk wilayah sekitar Tiongkok (daratan) dan wilayah lainnya . Silakan klik <a href='https://duiqt.github.io/herta_kuru/'> di sini untuk mengunjungi situs sumbernya pada Laman Github</a>.",
+                "show-credits-text": "ڤاڤرکن کريديت",
+                "repository-desc": "سيمڤنن ݢيتهب",
+                "options-txt-vo-lang": "بهاس سوارا",
+                "options-txt-lang": "بهاس لامن",
+                "dialogs-close": "توتوڤ",
+                "dialogs-credits-title": "کريديت",
+                "creditsHtmlContent": "بوکن دالم توروتن",
+                "Options": "تتڤن"
+            },
+            cardImage: "img/card_ms-Arab.jpg"
+        },
         "en": {
             audioList: null,
             texts: {
@@ -20,7 +64,9 @@
                 "options-txt-vo-lang": "Voice-Over Language",
                 "options-txt-lang": "Page Language",
                 "dialogs-close": "Close",
-                "dialogs-credits-title": "Credits"
+                "dialogs-credits-title": "Credits",
+                "creditsHtmlContent": "not in specific order",
+                "Options": "Options"
             },
             cardImage: "img/card_en.jpg"
         }, "cn": {
@@ -345,7 +391,7 @@
         fetch("credits.json").then(response => response.json()).then((data) => {
             var contributors = data.contributors;
             contributors = randomShuffle(contributors);
-            var creditsHtmlContent = `<p>in no specific order</p>`;
+            var creditsHtmlContent = getLocalText("creditsHtmlContent") ;
             creditsHtmlContent += `<ul class="mdui-list">`;
             for (let i = 0; i < contributors.length; i++) {
                 var current = contributors[i];
@@ -384,10 +430,12 @@
 
     function showOptions() {
         mdui.dialog({
-            title: 'Options',
+            title: getLocalText("Options"),
             content: `<div style="min-height: 350px;" class="mdui-typo">
     <label id="options-txt-lang">Page Language</label>
     <select id="language-selector" class="mdui-select" mdui-select='{"position": "bottom"}'>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="ms-Arab">Bahasa Melayu (Jawi)</option>
         <option value="en">English</option>
         <option value="cn">中文</option>
         <option value="ja">日本語</option>
